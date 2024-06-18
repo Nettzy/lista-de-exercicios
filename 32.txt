@@ -1,0 +1,31 @@
+def main():
+    
+  x = []
+  y = []
+  print("Digite os 5 elementos do vetor x:")
+  for i in range(5):
+      elemento = int(input(f"Digite o elemento {i+1}: "))
+      x.append(elemento)
+  print("\nDigite os 5 elementos do vetor y:")
+  for i in range(5):
+      elemento = int(input(f"Digite o elemento {i+1}: "))
+      y.append(elemento)
+
+  print("\n1. Soma entre x e y:")
+  soma = [x[i] + y[i] for i in range(5)]
+  print(soma)
+  print("\n2. multiplicação entre x e y:")
+  produto = [x[i] * y[i] for i in range(5)]
+  print(produto)
+  print("\n3. numeros em x que não estão em y:")
+  diferenca = [elem for elem in x if elem not in y]
+  print(diferenca)
+  print("\n4. numeros que aparecem nos dois vetores:")
+  intersecao = list(set(x) & set(y))
+  print(intersecao)
+  print("\n5. União de x e y :")
+  uniao = list(set(x).union(set(y).difference(set(x))))
+  print(uniao)
+
+if __name__ == "__main__":
+  main()
